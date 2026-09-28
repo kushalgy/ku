@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real-Time Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="dashboard">
+    <h1>Weather Dashboard</h1>
+    <p class="subtitle">Search for a city to view its current weather.</p>
+
+    <form id="searchForm" class="search-box">
+      <input type="text" id="cityInput" placeholder="Enter city name..." autocomplete="off" required>
+      <button type="submit">Search</button>
+    </form>
+
+    <p id="status" class="status" aria-live="polite"></p>
+
+    <section id="weatherCard" class="weather-card hidden">
+      <h2 id="cityName"></h2>
+      <p id="weatherDescription" class="description"></p>
+
+      <div class="weather-grid">
+        <article class="metric">
+          <span class="icon">🌡️</span>
+          <h3>Temperature</h3>
+          <p id="temperature">--</p>
+        </article>
+        <article class="metric">
+          <span class="icon">💧</span>
+          <h3>Humidity</h3>
+          <p id="humidity">--</p>
+        </article>
+        <article class="metric">
+          <span class="icon">💨</span>
+          <h3>Wind Speed</h3>
+          <p id="windSpeed">--</p>
+        </article>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
